@@ -1,6 +1,0 @@
-{
-  "homepage": "https://halaskar92.github.io/TestPWA/",
-  "dependencies": {
-    "workbox-precaching": "^6.5.4"
-  }
-}
