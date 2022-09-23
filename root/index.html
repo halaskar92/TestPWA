@@ -15,7 +15,7 @@
 
     <!-- Progressive Web App -->
     <meta name="theme-color" content="#f5f8fa">
-    <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="./manifest.json">
 
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
@@ -57,6 +57,24 @@
 
     <!-- main app script -->
     <script src="index.js" defer></script>
+    <script>navigator.serviceWorker.register("root/pwabuilder-adv-sw.js")</script>
+    <script>navigator.serviceWorker.register("root/pwabuilder-adv-sw.js")</script>
+    <script>
+        if ('sw' in navigator) {
+            navigator.serviceWorker.register('./sw.js')
+                .then(function (registration) {
+                    // Registration was successful
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }).catch(function (err) {
+                    // registration failed :(
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+        }
+    </script>
+
+    <script>navigator.serviceWorker.register("pwabuilder-adv-sw.js")</script>
+    <script>navigator.serviceWorker.register("pwabuilder-adv-sw.js")</script>
+    <script>navigator.serviceWorker.register("pwabuilder-adv-sw.js")</script>
 
 </head>
 <!-- load the 'header_auto_hide' on the body -->
@@ -65,9 +83,9 @@
 
     <!-- The header with profile icon button for opening the drawer layout (side menu panel) -->
     <header data-ui-include="layout/header" data-ui-options="options.headerBar" data-ui-field="header-bar"></header>
-
+    <h1>test</h1>
     <main data-ui-field="pages">
-        <h1>test</h1>
+
         <!-- HOME -->
         <section data-ui-include="pages/home"></section>
 
